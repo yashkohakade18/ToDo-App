@@ -9,7 +9,9 @@
     </style>
 </head>
 <body>
-    <div class="list-container" id="list-container"></div>
+    <div class="list-container" id="list-container">
+        <div  class="todo-item">TASK-1</div>
+    </div>
 
     <div class="action-container">
         <input type="text" id="input-todo" />
@@ -20,7 +22,17 @@
 
         function add(){
             const inputElement = document.getElementById('input-todo');
-            
+            todolist.push(inputElement.value)
+            inputElement.value = ""
+            rendertodolist()
+        }
+        function rendertodolist(){
+            const listcontainer = document.getElementById('list-container')
+            listcontainer.innerHTML = ""
+            for (const todoitem of todolist)
+            {
+                listcontainer.innerHTML += `<div  class="todo-item">${todoitem}</div>`
+            }
         }
     </script>
 </body>
