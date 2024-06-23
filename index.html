@@ -5,17 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo-App</title>
     <style>
-        
+         body{
+            background: linear-gradient(to right, #1c92d2, #f2fcfe);}
+         .action-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            
+         }  
+         .txt{
+            height: 50px;
+            width: 400px;
+            font-size: larger;
+            background-color: rgba(0, 217, 255, 0.253);
+            border: rgb(0, 145, 255) solid 3px;
+         }
+         .btn{
+            margin-left: 15px;
+            height: 56px;
+            width: 100px;
+            border-radius: 0px 50px 50px 0px  ;
+            background-color: rgba(0, 217, 255, 0.253);
+            border: rgb(0, 145, 255) solid 3px;
+            
+         } 
+
+         .list-container{
+            background-color: rgba(0, 217, 255, 0.253);
+            width: 600px;
+            margin: 20px auto;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+
+         }
+
+         .todo-item{
+            background-color: rgba(0, 217, 255, 0.777);
+            padding: 2px;
+            background-color: #0969f0;
+            font-size: large;
+
+         }
     </style>
 </head>
+
 <body>
+    <div class="action-container">
+        <input type="text" class="txt" id="input-todo" />
+      <button class="btn" onclick="add()">ADD</button>
+  </div>
+
     <div class="list-container" id="list-container">
         <div  class="todo-item">TASK-1</div>
-    </div>
-
-    <div class="action-container">
-        <input type="text" id="input-todo" />
-        <button onclick="add()">ADD</button>
     </div>
     <script>
         const todolist = []
